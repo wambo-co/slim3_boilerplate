@@ -1,0 +1,50 @@
+{
+    "name": "wambo/wambo-agency",
+    "description": "An app to control our wambo agency",
+    "type": "project",
+    "license": "Apache-2.0",
+    "autoload": {
+      "psr-4": {
+        "Wambo\\": "src"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Wambo\\": "tests"
+      }
+    },
+    "require": {
+      "php": "^7.2",
+      "slim/slim": "3.10.*",
+      "php-di/slim-bridge": "^2.0",
+      "slim/twig-view": "2.3.*",
+      "ramsey/uuid": "3.7.*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "6.0.*",
+      "squizlabs/php_codesniffer": "2.7.*",
+      "dprevite/lint": "^1.0",
+      "phpmd/phpmd" : "2.4.*",
+      "phploc/phploc": "3.0.*",
+      "sebastian/phpcpd": "2.0.*"
+    },
+    "scripts": {
+      "lint":  [ "vendor/bin/lint src/" ],
+      "cs":  [ "vendor/bin/phpcs --standard=PSR2 src/" ],
+      "cbf": [ "vendor/bin/phpcbf --standard=PSR2 src/" ],
+      "loc":  [ "vendor/bin/phploc src/" ],
+      "md":  [ "vendor/bin/phpmd src/ text ruleset.xml" ],
+      "cpd":  [ "vendor/bin/phpcpd src/" ],
+      "test": [  "vendor/bin/phpunit" ],
+      "test-all": [
+        "composer lint",
+        "composer cs",
+        "composer md",
+        "composer cpd",
+        "composer test"
+      ]
+    },
+    "repositories": [],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+  }
