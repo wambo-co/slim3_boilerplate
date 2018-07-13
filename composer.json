@@ -1,6 +1,6 @@
 {
     "name": "wambo/wambo-agency",
-    "description": "An app to control our wambo agency",
+    "description": "A boilerplate slim3 project",
     "type": "project",
     "license": "Apache-2.0",
     "autoload": {
