@@ -1,10 +1,11 @@
 <html>
 <head>
-    <link rel="stylesheet" href="/css/style.css">
+    {% embed 'page/head.twig' %}{% endembed %}
 </head>
 <body>
-    {% block body %}<h1>Hello World</h1>{% endblock %}
-
+    <div class="container">
+        {% block body %}<h1>Hello World</h1>{% endblock %}
+    </div>
     <script src="/js/bundle.js"></script>
 </body>
 </html>

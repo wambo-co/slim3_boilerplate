@@ -1,0 +1,5 @@
+<title>{{ meta.title }}</title>
+
+{% for filename in meta.stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ filename }}" media="all">
+{% endfor %}
